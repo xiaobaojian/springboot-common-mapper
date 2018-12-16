@@ -19,11 +19,6 @@ public class ProductController {
 
     @RequestMapping("/test")
     private String test(HttpSession session){
-        
-        
-        
-        
-        
         List<Product> products = productMapper.selectAll();
         session.setAttribute("products", products);
         return "index";
